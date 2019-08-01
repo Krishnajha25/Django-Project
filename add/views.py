@@ -5,3 +5,12 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, 'index.html')
+
+def sum(request):
+
+    val1 = request.POST['num1']
+    val2 = request.POST['num2']
+
+    res = val1 + val2
+
+    return render(request, 'sum.html', {'result':res})
