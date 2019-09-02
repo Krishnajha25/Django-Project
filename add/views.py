@@ -8,8 +8,8 @@ def index(request):
 
 def sum(request):
 
-    val1 = request.POST['num1']
-    val2 = request.POST['num2']
+    val1 = int(request.POST['num1'])
+    val2 = int(request.POST['num2'])
 
     res = val1 + val2
 
